@@ -11,3 +11,6 @@ def OR(x1:int, x2:int) -> int:
 
 def NAND(x1:int, x2:int) -> int:
     return perceptron(np.array([-0.5, -0.5]), np.array([x1, x2]), 0.7)
+
+def XOR(x1:int, x2:int) -> int:
+    return AND(NAND(x1, x2), OR(x1, x2))
